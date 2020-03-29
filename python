@@ -1,0 +1,288 @@
+#This is the adventure game that I made
+
+#Current Choices
+yes_no = ["yes", "no"]
+directions = ["left", "right", "forward", "backward"]
+
+# Introduction
+def start():
+    print("01000111 01101111 01100100 00100000 01100011 01100001 01101110 00100111 01110100 00100000 01101000 01100101 01101100 01110000 00100000 01111001 01101111 01110101")
+    print()
+    print("01000010 01100101 01110111 01100001 01110010 01100101")
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Gott mit uns.~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")#God be with us
+    name = input("What is your name, adventurer?\n")
+    print()
+    print("Greetings, " + name + ". Let us go on a quest to ሲኦል!")
+    print("You find yourself on the edge of a dark forest.")
+    print("Can you find your way through?\n")
+    input("Press Enter to Continue")
+
+
+# Forest Function
+def forest():
+    directions = ["left", "right", "forward", "backward"]
+    response = ""
+    while response not in yes_no:
+        response = input("Would you like to step into the forest?\nyes/no\n")
+        if response == "yes":
+            print("You head into the forest. You hear screams in the distance.\n")
+        elif response == "no":
+            print("You are not ready for this quest. You better run away, " + name + ".")
+            quit()
+        else:
+            print("I didn't understand that.\n")
+
+            # Next part of game. In Alpha 1.02 Forest Entrance
+    response = ""
+    while response not in directions:
+        print("To your left, you see a bear.")
+        print("To your right, there is more forest. It is where the screams are coming from.")
+        print("There is a rock wall directly in front of you.")
+        print("Behind you is the forest exit.\n")
+        response = input("What direction do you move?\nleft/right/forward/backward\n")
+        if response == "left":
+            print("The bear eats you. Farewell, " + name + ".")
+            quit()
+        elif response == "right":
+            print("You head deeper into the forest.\n")
+        elif response == "forward":
+            print("You cannot scale the wall.\n")
+            response = ""
+        elif response == "backward":
+            print("You leave the forest. Goodbye, You better run away before §&§@§d§ gets you  " + name + ".")
+            quit()
+        else:
+            print("I didn't understand that.\n")
+# Next Part. Alpha 1.03 Chapter One SATANAS INIMICAL DEI
+def outside_fortress():
+    print()
+
+    directions = ["left", "right", "forward", "backward"]
+    response = ""
+    while response not in directions:
+        print("To your left there is a wall.")
+        print("In front of you, is a fortress that was abandoned, but the screams come from here.")
+        print("To the right of you, there is a plaque with the words SATANAS INIMICAL DEI.")#Translation: Satan Enemy of God
+        print("Behind you is the path back to the forest.")
+        print()
+        response = input("Which direction do you go?\nleft/right/forward/backward\n")
+        if response == "left":
+            print("It's a wall, part of the fortress. When you tried to scale it, you were ripped to shreds by @#^*& himself.\n")
+            quit()
+        elif response == "right":
+            print("Its a plaque, with the words SATANAS INIMICAL DEI inscribed in blood.\n")
+            response = ""
+        elif response == "forward":
+            print("You enter the fortress.\n")
+        elif response == "backward":
+            print("You left the forest and you were killed in your bed.\n")
+            quit()
+        else:
+            print("That is not a vaild response Player.")
+
+
+
+#Next Part. Alpha 1.04 Chapter One Section 1, The Fortress of Mantiev, Derrenwood Sector
+def in_fortress():
+    directions = ["left", "right", "forward", "backward"]
+
+    response = ""
+    print()
+
+    print("You have entered the Fortress of Mantiev in the Derrenwood Sector.")
+    print("Unlike others, this seems to be abandoned with the exception.")
+    print("Of screams coming from within the fortress.")
+    print()
+    while response not in directions:
+        print("In front of you is a locked door. Perhaps there is a key?")
+        print("To your left, It appears to be a bedroom.")
+        print("To your right, is a sword mantle piece.")
+        print("The Entrance is behind you")
+        response = input("Which direction do you go?\nleft/right/forward/backward\n")
+        if response == "left":
+            print(" You enter the bedroom")
+        elif response == "front":
+            print("It's a locked door. Either a switch or key might open it")
+        elif response == "right":
+            print("You approach the sword mantle piece.")
+            response = ""
+        elif response == "backwards":
+            print("You return outside the fortress")
+        else:
+            print("Try something else HUMAN")
+#In the Bedroom, Mantiev Fortress Derrenwood Sector. Alpha 1.06
+def in_bedroom():
+    print()
+    directions = ["left", "right", "forward", "backward"]
+    response = ""
+    print("You are in a bedroom, the bed has some stains")
+    print("There is a  drawer.")
+    print("The window is locked with Iron bars in place.")
+    print("The walls are covered in scratch marks made by some large beast.")
+    input("Press Enter to continue")
+    print()
+    print("The screams seem to have stopped above you.")
+    print("The entrance door closes by some unseen force.")
+    print("Pounding starts to begin from the locked door.")
+    input("Press Enter")
+    print()
+    print("Please... Please help me.")
+    print("A loud bang is heard from the locked door, and there is the sound of heavy breathing.")
+    print("What do you do?")
+    print()
+    print()
+    print("The bed is in front of you.")
+    print("The window is to your left.")
+    print("The drawer is to your right.")
+    print("The entrance hall is behind you, but I don't think it is a good idea.")
+
+    response = input("Which direction do you go?\nleft/right/forward/backward\n")
+    if response == "left":
+        print("The window cannot be opened, but you can see that the sky is red static.")
+        print("The plaque is in the center, with human skulls all around it")
+        response = ""
+    elif response == "forward":
+        print("You examine the bed. There is nothing exraordinary about it.")
+        response = ""
+    elif response == "backward":
+       print("You returned to the main hall.")
+       print("You return to the entrance hall, the breathing is still there.")
+    elif response == "right":
+        print("You approach the drawer.")
+    else:
+        print("TRY MAKING SENSE §&§@§d§!")
+def bedroom_drawer():
+    directions = ["1", "2", "3", "4"]
+    response = ""
+    print("The drawer has intricate patterns of ships and waves on it.")
+    print()
+    print()
+    print("Which drawer do you open?")
+    response = input("Which drawer do you pick?\n1/2/3/4\n")
+    if response == "1":
+        print("It is empty with some stains.")
+        response = ""
+
+    elif response == "2":
+        print("Its empty bub.")
+        response = ""
+
+    elif response == "3":
+        print("There is a KEY!")
+        print("Check the last drawer")
+        response = ""
+
+    elif response == "4":
+        print("There is a golden dagger, it might come in handy in fights.")
+
+    else:
+        print("CAN'T YOU MAKE SENSE???!!!")
+    print("You are now armed with a dagger, and a key. Which I'm sure you could figure out that it goes to the locked door.")
+    print("Honestly, I hope you know how to use that sharp pointy thingy.")
+    print()
+    print("So, you leave the bedroom and you approach the locked door.")
+
+def locked_door():
+    directions = ["left", "right", "forward", "backward"]
+    response = ""
+    print("You are currently standing in front of the locked door.")
+    print()
+    print("There is a keyhole, and on the other side of the door, you can hear footsteps walking away.")
+    print()
+    print("Do you put the key in the keyhole?")
+    input("Press Enter")
+    print()
+    print("You open the door and it swings open. You throw up over its cobblestone floor as the view unfolds in front of you.")
+    print("There is some sort of ritual circle in the center. The tables have been pushed to the side. A body hangs from the chandilier.")
+    print()
+    print()
+    print("In front of you is the ritual or altar or whatever the pierdolić it is.")
+    print("To your left is a lever.")
+    print("Behind you is the exit.")
+    print("To your right is a hallway.")
+    print()
+    print("Where do you go?")
+    response = input("Which direction do you go?\nleft/right/forward/backward\n")
+    if response == "left":
+        print("You filcked the lever like Minecraft. Something happened.")
+        response = ""
+    elif response == "right":
+        print("You enter the hallway.")
+    elif response == "front":
+        print("The altar lights up red, and you are sucked into a different dimension.")
+        print("You land inside someones dinner.")
+        print("When you look up, you can see the Devil with some his associates eating, and you have interrupted their meal.")
+        print("You died a gruesome death. :/ Sorry bud.")
+        quit()
+    elif response == "backward":
+        print("You headed home, leaving a trail of urine. You have been shocked into silence and you live the end of your days as a social outcast.")
+        quit()
+
+def kings_hall():
+    directions = ["left", "right", "forward", "backward"]
+    response = ""
+    print("Stepping out into the hallway, there is a soft, plush rug before you.")
+    print("Sobbing can be heard from around the corner.")
+    print()
+    print("Do you proceed? Press Enter to Continue.")
+    input("Press Enter")
+    print()
+    print("Rounding the corner, gripping the toothpi- dagger, I mean dagger.")
+    print("There is a room, and this is the source of the sobbing.")
+    input("Press Enter")
+    print()
+    print("There is the Mantiev Motto, Ave ad coronam, Hail the crown, is inscribed on it.")
+    print("Without hesitation, you open the door.")
+
+def kings_bedroom():
+    directions = ["kill"]
+    response = ""
+    print("You stand before a king.")
+    print("The sobbing mess is currently bleeding from unknown cuts from his body.")
+    print("It stops to face you, and the door behind you slams shut.")
+    print()
+    print()
+    print("In a raspy voice, it talks to you.")
+    print("Wwhhaatt aarree yyoouu ddooiinngg hheerree?")
+    print("what do you do?")
+    response = input("What do you do??\nkill\n")
+
+    if response == "kill":
+        print("With lighting speed, you stabbed the king repeatedly, until there is nothing but a mutilated corpse.")
+    else:
+        print("SO CLOSE, YET SO FAR.")
+
+    print("You are suddenly filled with riches beyond your wildest dreams, rubies, gold, emeralds, precious medals.")
+    print("Carrying as much as you could, you attempt to leave the fortress, but you cannot.")
+    print()
+    print("Hours turned into days, and hunger began to grow inside you.")
+    print("The body begins to decay, and you can feel every peel, every tear.")
+    print()
+    print("Adding to the insult, a crown is forcibly stitched on to you.")
+    print("Centuries pass while you decay, yet preserve in the fortress.")
+    print("Suddenly, a reaserch team enters, marveling at the wonders and the well kept condition of the fortress.")
+    print()
+    print()
+    print("You begin screaming, in hopes of ending your misery.")
+    print("They eventually find you. To your horror, they attack you and you can see them becoming the king, and his court, condemmed forever.")
+    print()
+    print()
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+    name = input("What is your name, adventurer?\n")
+    print()
+    print("Greetings, " + name + ". Let us go on a quest to ሲኦል!")
+    print("You find yourself on the edge of a dark forest.")
+    print("Can you find your way through?\n")
+    print()
+    print()
+    print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~THE END~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~.")
+
+start()
+forest()
+outside_fortress()
+in_fortress()
+in_bedroom()
+bedroom_drawer()
+locked_door()
+kings_hall()
+kings_bedroom()
